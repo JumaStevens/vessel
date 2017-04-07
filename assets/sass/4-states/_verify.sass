@@ -1,0 +1,24 @@
+.verify-success .verify
+	visibility: hidden
+	+medium
+		transform: translateX(calc(50vw + 40px))
+	&__header
+		opacity: 0
+	&__subtext-container
+		opacity: 0
+		
+.verify-success .menu
+	transition: transform 100ms ease-out 400ms
+	+medium
+		transform: translateX(40px)
+	&-toggle--top
+		transform: translate(-50%, -50%)
+		+medium
+			transform: translate(-50%, -60px)
+	&-toggle--left
+		transform: translate(-60px, -50%)
+		+medium
+			transform: translate(-50%, -50%)
+
+.verify-failure .verify__button-container
+	opacity: 0

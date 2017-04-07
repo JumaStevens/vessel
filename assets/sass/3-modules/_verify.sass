@@ -1,0 +1,50 @@
+@import '../config'
+
+
+=medium
+	@media screen and (min-width: $medium-width)
+		@content
+
+
+.verify
+	width: 100vw
+	height: 100vh
+	background: $white-color
+	position: fixed
+	z-index: 30
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	transition: transform 500ms ease-in, visibility 0ms 1s
+	+medium
+		width: 50vw
+
+	&__header
+		margin: 0 20px
+		font-size: 2.2rem
+		transition: opacity 200ms ease
+		+medium
+			font-size: 3rem
+
+	&__subtext-container
+		max-width: 230px
+		font-size: 0.8rem
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		transition: opacity 200ms ease
+		+medium
+			max-width: 350px
+			align-items: flex-start
+
+	&__subtext
+		margin-top: 60px
+
+	&__button-container
+		margin-top: 20px
+		transition: opacity 200ms ease
+
+	&__button-0
+		margin-right: 20px

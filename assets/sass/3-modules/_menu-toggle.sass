@@ -1,0 +1,43 @@
+@import '../config'
+
+.menu-toggle
+	position: fixed
+	z-index: 110
+	transition: transform 500ms ease 500ms
+	//temp
+	width: 20px
+	height: 20px
+	background: $white-color
+	+medium
+		background: transparent
+	&--top
+		top: 40px
+		right: 40px
+		transform: translate(-50%, -60px)
+	&--left
+		top: 50vh
+		left: 20px
+		transform: translate(-60px, -50%)
+	&-container
+		position: relative
+		width: 100%
+		height: 100%
+	&__line-0
+		position: absolute
+		right: 0
+		width: 100%
+		height: 4px
+		background: $primary-color
+		transition: transform 500ms, width 500ms
+	&__line-1
+		@extend .menu-toggle__line-0
+		top: 8px
+	&__line-2
+		@extend .menu-toggle__line-0
+		bottom: 0
+	&:hover &__line-0
+		width: 50%
+	&:hover &__line-1
+		width: 90%
+	&:hover &__line-2
+		width: 80%
