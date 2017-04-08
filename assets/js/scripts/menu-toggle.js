@@ -11,6 +11,7 @@ var menu_toggle = {
 				menu_toggle.active = true;
 				container.classList.add('menu-open');
 				container.classList.remove('menu-close');
+				container.classList.remove('menu-close-hover');
 			}
 			// close
 			else if(menu_toggle.active) {
@@ -19,17 +20,11 @@ var menu_toggle = {
 				container.classList.remove('menu-open');
 			}
 		}
-		else if(e.type === 'mouseenter') {
-			if(!menu_toggle.active) {
-				container.classList.add('menu-close-hover');
-			}
-			else if(menu_toggle.active) {
-				container.classList.add('menu-open-hover');
-			}
+		else if(e.type === 'mouseenter' && !menu_toggle.active) {
+			container.classList.add('menu-close-hover');
 		}
 		else if(e.type === 'mouseleave') {
 			container.classList.remove('menu-close-hover');
-			container.classList.remove('menu-open-hover');
 		}
 
 	},

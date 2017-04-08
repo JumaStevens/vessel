@@ -1,0 +1,15 @@
+@import '../config'
+@import '../mixins'
+
+.section-container
+	width: 100vw
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	+medium
+		position: fixed
+		z-index: 20
+		width: calc(50vw - #{$menu-border-width})
+		height: 100vh
+		transition: transform 500ms ease-in, opacity 200ms ease

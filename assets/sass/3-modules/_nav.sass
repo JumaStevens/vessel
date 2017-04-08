@@ -1,0 +1,45 @@
+@import '../config'
+
+.nav
+	+medium
+		position: fixed
+		z-index: 100
+		top: 50%
+		left: calc(50% + #{$menu-border-width})
+		width: 40px
+		height: 200px
+		transform: translate(-50%, -50%)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+
+	&__button
+		+medium
+			width: 35px
+			height: 35px
+			border-radius: 25px
+			background: $primary-color
+
+	&__indicator-container
+		+medium
+			width: 20px
+			height: 50%
+			padding: 5px 0
+			border-top-left-radius: 25px
+			border-top-right-radius: 25px
+			border-bottom-left-radius: 25px
+			border-bottom-right-radius: 25px
+			background: $white-color
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
+
+	&__indicator
+		+medium
+			width: 10px
+			height: 10px
+			border-radius: 25px
+			background: $grey-color
+

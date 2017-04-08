@@ -1,7 +1,7 @@
 .verify-success .verify
 	visibility: hidden
 	+medium
-		transform: translateX(calc(50vw + 40px))
+		transform: translateX(calc(50vw + #{$menu-border-width}))
 	&__header
 		opacity: 0
 	&__subtext-container
@@ -10,15 +10,19 @@
 .verify-success .menu
 	transition: transform 100ms ease-out 400ms
 	+medium
-		transform: translateX(40px)
+		transform: translateX($menu-border-width)
 	&-toggle--top
-		transform: translate(-50%, -50%)
+		transform: translate(0, 0)
 		+medium
-			transform: translate(-50%, -60px)
+			transform: translate(0, -80px)
 	&-toggle--left
-		transform: translate(-60px, -50%)
+		transform: translate(-$menu-border-width/2 - 20px, -50%)
 		+medium
 			transform: translate(-50%, -50%)
+
+.verify-success .backdrop
+	+medium
+		transform: translateX(calc(50vw + #{$menu-border-width}))
 
 .verify-failure .verify__button-container
 	opacity: 0
