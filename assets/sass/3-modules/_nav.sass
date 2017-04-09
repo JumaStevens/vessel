@@ -1,18 +1,22 @@
 @import '../config'
 
 .nav
+	position: fixed
+	z-index: -1
+	visibility: hidden
 	+medium
-		position: fixed
-		z-index: 100
 		top: 50%
 		left: calc(50% + #{$menu-border-width})
 		width: 40px
 		height: 200px
-		transform: translate(-50%, -50%)
+		visibility: initial
+		opacity: 0
 		display: flex
 		flex-direction: column
 		justify-content: space-between
 		align-items: center
+		transform: translate(-50%, -50%)
+		transition: opacity 250ms ease-in 500ms
 
 	&__button
 		+medium
@@ -20,6 +24,21 @@
 			height: 35px
 			border-radius: 25px
 			background: $primary-color
+			display: flex
+			justify-content: center
+			align-items: center
+			transition: opacity 250ms ease
+		&-arrow
+			+medium
+				width: 16px
+				height: 16px
+				fill: $white-color
+				pointer-events: none
+				transform: translateY(1px)
+				transition: opacity 1000ms ease
+			&-up
+				+medium
+					transform: translateY(-1px) rotate(180deg)
 
 	&__indicator-container
 		+medium
@@ -42,4 +61,5 @@
 			height: 10px
 			border-radius: 25px
 			background: $grey-color
+			transition: background 500ms ease
 

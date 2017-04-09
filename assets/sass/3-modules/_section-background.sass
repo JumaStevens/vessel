@@ -1,12 +1,15 @@
 @import '../config'
 
-.backdrop
+.section-background
+	display: none
 	+medium
 		position: fixed
 		z-index: 10
+		top: 0
+		right: 0
 		width: calc(50vw - #{$menu-border-width})
 		height: 100vh
 		background: $white-color
-		transition: transform 500ms ease-in
-		
-		
+		display: initial
+		visibility: hidden
+		transition: visibility 0ms ease-in 500ms

@@ -20,9 +20,15 @@
 		+medium
 			transform: translate(-50%, -50%)
 
-.verify-success .backdrop
+.verify-success .nav
+	opacity: 0
 	+medium
-		transform: translateX(calc(50vw + #{$menu-border-width}))
+		z-index: 90
+		opacity: 1
+
+.verify-success .section-background
+	+medium
+		visibility: initial
 
 .verify-failure .verify__button-container
 	opacity: 0

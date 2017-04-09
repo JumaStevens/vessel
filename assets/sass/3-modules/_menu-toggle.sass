@@ -5,7 +5,6 @@
 	z-index: 110
 	width: 20px
 	height: 20px
-	transition: transform 500ms ease 500ms
 	
 	&--top
 		top: 40px
@@ -18,12 +17,14 @@
 		display: flex
 		justify-content: center
 		align-items: center
+		transition: transform 500ms ease 500ms
 
 	&--left
 		top: 50vh
 		left: $menu-border-width/2
 		background: transparent
 		transform: translate(-$menu-border-width/2 - 20px, -50%)
+		transition: transform 100ms ease 400ms
 	
 	&-container
 		position: relative

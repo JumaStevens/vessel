@@ -4,7 +4,22 @@
 	transform: translateX(100%)
 	transition: transform 500ms ease
 
+	&-nav__link
+		transform: translateY(0)
+		transition: transform 500ms ease 500ms
+	&-social__link
+		transform: translateY(0)
+		transition: transform 500ms ease 500ms
+	&-credit__copy
+		transform: translateY(0)
+		transition: transform 500ms ease 500ms
+
 .menu-open .menu-toggle
+	&--left
+		transition: transform 500ms ease 0ms
+		+medium
+			transform: translate(100%, -50%)
+
 	&__line-0
 		width: 100%
 		transform: translate(0, 4px) rotate(135deg)
@@ -13,3 +28,9 @@
 		transform: translate(-10px, 0) rotate(0)
 	&__line-2
 		transform: translate(0, -4px) rotate(-135deg)
+
+.menu-open .menu-color
+	+medium
+		visibility: initial
+		transform: translateX(-100%)
+		transition: transform 250ms ease 500ms

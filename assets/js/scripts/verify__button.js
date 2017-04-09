@@ -9,7 +9,6 @@ var verify = {
 
 		if(e.target === verify.button[0]) {
 			container.classList.add('verify-success');
-			container.classList.add('nav-prev-highlights');
 			container.classList.add('nav-about');
 		}
 		else if(e.target === verify.button[1]) {

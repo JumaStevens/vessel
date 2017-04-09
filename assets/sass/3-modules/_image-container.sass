@@ -6,16 +6,21 @@
 
 .image-container
 	display: none;
-
 	+medium
-		width: 100vw
-		height: 100vh
-
-		display: initial
 		position: fixed
 		z-index: 10
 		top: 0
 		left: 0
+		width: 100vw
+		height: 100vh
+		display: initial
+
+	&__image
+		@extend .image-container
 
 	&__image-0
 		@extend .image-container
+		+medium
+		z-index: 11
+
+

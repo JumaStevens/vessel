@@ -3,20 +3,15 @@ var nav = {
 	holder: ['about', 'highlights', 'store-menu', 'location', 'contact', 'footer'],
 	indicator: 0,
 
-
-
 	handler: function(e) {
 		const container = document.getElementsByClassName('container')[0];
-		const section = document.getElementsByClassName('section-container');
 
 		if(e.target === nav.button[0] && nav.indicator > 0) {
 			// clear nav-names
 			for(let i=0;i<nav.holder.length;i++) {
 				container.classList.remove('nav-'+nav.holder[i]);
-				container.classList.remove('nav-prev-'+nav.holder[i]);
 			}
 			// add nav-name
-			container.classList.add('nav-prev-'+nav.holder[nav.indicator]);
 			nav.indicator -= 1;
 			container.classList.add('nav-'+nav.holder[nav.indicator]);
 		}
@@ -24,10 +19,8 @@ var nav = {
 			// clear nav-names
 			for(let i=0;i<nav.holder.length;i++) {
 				container.classList.remove('nav-'+nav.holder[i]);
-				container.classList.remove('nav-prev-'+nav.holder[i]);
 			}
 			// add nav-name
-			container.classList.add('nav-prev-'+nav.holder[nav.indicator]);
 			nav.indicator += 1;
 			container.classList.add('nav-'+nav.holder[nav.indicator]);
 		}

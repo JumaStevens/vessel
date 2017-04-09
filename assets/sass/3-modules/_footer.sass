@@ -1,8 +1,8 @@
-@import '../config'
-@import '../mixins'
+@import 'config'
 
-.section-container
+.footer
 	width: 100vw
+	background: $grey-color
 	display: flex
 	flex-direction: column
 	justify-content: center
@@ -10,9 +10,9 @@
 	+medium
 		position: fixed
 		z-index: 20
-		top: 20%
+		top: 100%
 		right: 0
 		width: calc(50vw - #{$menu-border-width})
-		height: 100vh
-		opacity: 0
-		transition: transform 500ms ease-in, opacity 1000ms ease
+		height: calc(50vh - 100px) // 100px = .nav height/2
+		max-height: 200px
+		transition: transform 500ms ease-in

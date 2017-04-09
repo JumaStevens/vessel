@@ -1,69 +1,85 @@
 @import '../config'
 
-// about
-.nav-about.nav-prev-highlights .about
+=nav-active
 	+medium
-		top: -100%
-		right: 0
-		transform: translateY(100%)
-		transition-delay: 500ms
+		z-index: 21
+		opacity: 1
+		transform: translateY(-20%)
+
+// about	
+.nav-about .about
+	+nav-active
+.nav-about .nav__indicator-0
+	+medium
+		background: $primary-color
+.nav-about .nav__button-up
+	+medium
+		opacity: 0
+		pointer-events: none
+.nav-about .nav__button-arrow-up
+	+medium
+		opacity: 0
+.nav-about .image-container__image-0
+	+medium
+		z-index: 12
 
 // highlights
-.nav-highlights.nav-prev-about .highlights
+.nav-highlights .highlights
+	+nav-active
+.nav-highlights .nav__indicator-1
 	+medium
-		top: 100%
-		right: 0
-		background: red
-		transform: translateY(-100%)
-		transition-delay: 500ms
-.nav-highlights.nav-prev-about .about
+		background: $primary-color
+.nav-highlights .image-container__image-1
 	+medium
-		top: -100%
-		right: 0
-		background: brown
-		transform: translateY(0)
-		transition-delay: 500ms
-.nav-highlights.nav-prev-store-menu .highlights
-	+medium
-		top: -100%
-		right: 0
-		background: pink
-		transform: translateY(100%)
-		transition-delay: 500ms
-.nav-highlights.nav-prev-store-menu .store-menu
-	+medium
-		top: 100%
-		right: 0
-		background: yellow
-		transform: translateY(0)
-		transition-delay: 500ms
+		z-index: 12
 
 // store menu
-.nav-store-menu.nav-prev-highlights .store-menu
+.nav-store-menu .store-menu
+	+nav-active
+.nav-store-menu .nav__indicator-2
 	+medium
-		top: 100%
-		right: 0
-		background: orange
+		background: $primary-color
+.nav-store-menu .image-container__image-2
+	+medium
+		z-index: 12
+
+// location
+.nav-location .location
+	+nav-active
+.nav-location .nav__indicator-3
+	+medium
+		background: $primary-color
+.nav-location .image-container__image-3
+	+medium
+		z-index: 12
+
+// contact
+.nav-contact .contact
+	+nav-active
+.nav-contact .nav__indicator-4
+	+medium
+		background: $primary-color
+.nav-contact .image-container__image-4
+	+medium
+		z-index: 12
+
+// footer
+.nav-footer .footer
+	+medium
+		z-index: 22
 		transform: translateY(-100%)
-		transition-delay: 500ms
-.nav-store-menu.nav-prev-highlights .highlights
+.nav-footer .nav__indicator-5
 	+medium
-		top: -100%
-		right: 0
-		background: lightblue
-		transform: translateY(0)
-		transition-delay: 500ms
-.nav-store-menu.nav-prev-location .store-menu
+		background: $primary-color
+.nav-footer .contact
+	+nav-active
+.nav-footer .nav__button-down
 	+medium
-		top: -100%
-		right: 0
-		background: green
-		transform: translateY(100%)
-		transition-delay: 500ms
-.nav-store-menu.nav-prev-location .location
+		opacity: 0
+		pointer-events: none
+.nav-footer .nav__button-arrow-down
 	+medium
-		top: 100%
-		right: 0
-		background: blue
-		transform: translateY(0)
-		transition-delay: 500ms
+		opacity: 0
+.nav-footer .image-container__image-4
+	+medium
+		z-index: 12

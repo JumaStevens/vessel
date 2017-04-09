@@ -8,3 +8,38 @@
 	width: 100vw
 	height: 100vh
 	background: $white-color
+	display: flex
+	flex-direction: column
+	justify-content: center
+	font-size: 2rem // temp
+
+.menu-nav
+	margin-left: 16vw
+	&__item
+		overflow: hidden
+	&__link
+		display: block
+		transform: translateY(100%)
+
+.menu-social
+	margin: 40px 0 0 16vw
+	display: flex
+	&__item
+		margin-right: 10px
+		overflow: hidden
+	&__link
+		display: block
+		transform: translateY(100%)
+
+.menu-credit
+	position: fixed
+	left: 0
+	bottom: 0
+	font-size: 1rem // temp
+	margin: 0 0 10px 16vw
+	overflow: hidden
+	+medium
+		margin: 0 0 20px 16vw
+	&__copy
+		display: block
+		transform: translateY(100%)
