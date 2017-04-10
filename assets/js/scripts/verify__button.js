@@ -13,7 +13,7 @@ var verify = {
 		}
 		else if(e.target === verify.button[1]) {
 			var original_subtext = subtext.innerHTML;
-			subtext.innerHTML = 'We&#39;re sorry! You must be 21+ to continue.';
+			subtext.innerHTML = 'Sorry, you must be 21+ to continue.';
 			container.classList.add('verify-failure');
 
 			// reset verification

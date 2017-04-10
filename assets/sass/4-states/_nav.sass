@@ -6,80 +6,48 @@
 		opacity: 1
 		transform: translateY(-20%)
 
-// about	
-.nav-about .about
+// active section	
+.nav-about .about,
+.nav-highlights .highlights,
+.nav-store-menu .store-menu,
+.nav-location .location,
+.nav-contact .contact,
+.nav-footer .contact
 	+nav-active
-.nav-about .nav__indicator-0
-	+medium
-		background: $primary-color
-.nav-about .nav__button-up
-	+medium
-		opacity: 0
-		pointer-events: none
-.nav-about .nav__button-arrow-up
-	+medium
-		opacity: 0
-.nav-about .image-container__image-0
-	+medium
-		z-index: 12
 
-// highlights
-.nav-highlights .highlights
-	+nav-active
-.nav-highlights .nav__indicator-1
-	+medium
-		background: $primary-color
-.nav-highlights .image-container__image-1
-	+medium
-		z-index: 12
-
-// store menu
-.nav-store-menu .store-menu
-	+nav-active
-.nav-store-menu .nav__indicator-2
-	+medium
-		background: $primary-color
-.nav-store-menu .image-container__image-2
-	+medium
-		z-index: 12
-
-// location
-.nav-location .location
-	+nav-active
-.nav-location .nav__indicator-3
-	+medium
-		background: $primary-color
-.nav-location .image-container__image-3
-	+medium
-		z-index: 12
-
-// contact
-.nav-contact .contact
-	+nav-active
-.nav-contact .nav__indicator-4
-	+medium
-		background: $primary-color
-.nav-contact .image-container__image-4
-	+medium
-		z-index: 12
-
-// footer
+// active section (footer)
 .nav-footer .footer
 	+medium
 		z-index: 22
 		transform: translateY(-100%)
+
+// active section indicator
+.nav-about .nav__indicator-0,
+.nav-highlights .nav__indicator-1,
+.nav-store-menu .nav__indicator-2,
+.nav-location .nav__indicator-3,
+.nav-contact .nav__indicator-4,
 .nav-footer .nav__indicator-5
 	+medium
 		background: $primary-color
-.nav-footer .contact
-	+nav-active
+
+// active image
+.nav-about .image-container__image-0,
+.nav-highlights .image-container__image-1,
+.nav-store-menu .image-container__image-2,
+.nav-location .image-container__image-3,
+.nav-contact .image-container__image-4,
+.nav-footer .image-container__image-4
+	+medium
+		z-index: 12
+
+// buttons
+.nav-about .nav__button-up,
 .nav-footer .nav__button-down
 	+medium
 		opacity: 0
 		pointer-events: none
+.nav-about .nav__button-arrow-up,
 .nav-footer .nav__button-arrow-down
 	+medium
 		opacity: 0
-.nav-footer .image-container__image-4
-	+medium
-		z-index: 12

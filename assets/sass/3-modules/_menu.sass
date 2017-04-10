@@ -18,8 +18,14 @@
 	&__item
 		overflow: hidden
 	&__link
+		position: relative
 		display: block
+		cursor: pointer
 		transform: translateY(100%)
+		&:hover
+			color: $primary-color
+
+
 
 .menu-social
 	margin: 40px 0 0 16vw
@@ -35,7 +41,6 @@
 	position: fixed
 	left: 0
 	bottom: 0
-	font-size: 1rem // temp
 	margin: 0 0 10px 16vw
 	overflow: hidden
 	+medium

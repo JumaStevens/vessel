@@ -4,15 +4,13 @@
 	transform: translateX(100%)
 	transition: transform 500ms ease
 
-	&-nav__link
+	&-nav__link, &-social__link, &-credit__copy
 		transform: translateY(0)
-		transition: transform 500ms ease 500ms
+		transition: transform 500ms ease 500ms, color 200ms ease
 	&-social__link
-		transform: translateY(0)
-		transition: transform 500ms ease 500ms
+		transition: transform 500ms ease 600ms, fill 200ms ease
 	&-credit__copy
-		transform: translateY(0)
-		transition: transform 500ms ease 500ms
+		transition-delay: 700ms
 
 .menu-open .menu-toggle
 	&--left
