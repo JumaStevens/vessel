@@ -1,9 +1,25 @@
 @import '../config'
 
 .about
-
+	+medium
+		justify-content: initial
 	&__image
 		width: 100%
 		height: auto
 		+medium
 			display: none;
+	&__content
+		max-width: 350px
+		margin: 0 80px
+	&__header
+		font-family: $primary-font
+		font-size: 6rem
+		color: $primary-color
+		+medium
+			height: 40vh
+			display: flex
+			align-items: center
+	&__copy
+		font-family: $secondary-font
+		color: rgb(34,34,34)
+		line-height: 1.6

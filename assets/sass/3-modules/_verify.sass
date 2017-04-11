@@ -8,39 +8,47 @@
 	width: 100vw
 	height: 100vh
 	background: $white-color
-	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
 	transition: transform 500ms ease-in, visibility 0ms 500ms
 	+medium
 		width: 50vw
 
-	&__header
-		margin: 0 20px
-		font-size: 2.2rem
-		transition: opacity 200ms ease
-		+medium
-			font-size: 3rem
+	&__logo
+		margin-bottom: 15px
+		//display: none
 
-	&__subtext-container
-		max-width: 230px
-		font-size: 0.8rem
+	&__header
+		height: 50%
 		display: flex
 		flex-direction: column
 		justify-content: center
 		align-items: center
+		font-family: $primary-font
+		font-size: 2.2rem
+		color: $primary-color
+		text-transform: uppercase
 		transition: opacity 200ms ease
 		+medium
-			max-width: 350px
-			align-items: flex-start
+			font-size: 3rem
+		&-copy
+			font-size: 0.5rem
+			&--color
+				color: $black-color
 
-	&__subtext
-		margin-top: 60px
 
-	&__button-container
-		margin-top: 20px
+	&__subtext-container
+		height: 20%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		font-family: $secondary-font
+		font-size: 1rem
 		transition: opacity 200ms ease
 
-	&__button-0
+	&__button-container
+		margin-top: 15px
+		transition: opacity 200ms ease
+
+	&__button-1
+		display: none
 		margin-right: 20px
