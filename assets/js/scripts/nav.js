@@ -32,5 +32,3 @@ var nav = {
 		}
 	}
 };
-
-nav.event_listener();

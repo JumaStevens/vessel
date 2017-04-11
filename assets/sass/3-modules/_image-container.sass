@@ -1,9 +1,5 @@
 @import '../config'
 
-=medium
-	@media screen and (min-width: $medium-width)
-		@content
-
 .image-container
 	display: none;
 	+medium
@@ -17,10 +13,9 @@
 
 	&__image
 		@extend .image-container
-
+		+medium
+			background-repeat: no-repeat
+			background-size: cover
 	&__image-0
-		@extend .image-container
 		+medium
 		z-index: 11
-
-

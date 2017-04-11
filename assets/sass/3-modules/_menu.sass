@@ -8,18 +8,34 @@
 	width: 100vw
 	height: 100vh
 	background: $white-color
+	font-family: $secondary-font
+	font-size: 2rem
 	display: flex
 	flex-direction: column
 	justify-content: center
-	font-size: 2rem // temp
+	transition: transform 100ms ease-out 400ms
+	+medium
+		font-size: 3rem
+		transform: translateX($menu-border-width)
+	&-toggle--top
+		transform: translate(0, 0)
+		+medium
+			transform: translate(0, -80px)
+	&-toggle--left
+		transform: translate(-$menu-border-width/2 - 20px, -50%)
+		+medium
+			transform: translate(-50%, -50%)
 
 .menu-nav
 	margin-left: 16vw
 	&__item
+		margin: 5px 0
 		overflow: hidden
+		+medium
+			margin: 10px 0
 	&__link
 		position: relative
-		display: block
+		display: inline-block
 		cursor: pointer
 		transform: translateY(100%)
 		&:hover
@@ -28,8 +44,10 @@
 
 
 .menu-social
-	margin: 40px 0 0 16vw
+	margin: 25px 0 0 16vw
 	display: flex
+	+medium
+		margin: 40px 0 0 16vw
 	&__item
 		margin-right: 10px
 		overflow: hidden
@@ -48,3 +66,4 @@
 	&__copy
 		display: block
 		transform: translateY(100%)
+		font-size: 1rem

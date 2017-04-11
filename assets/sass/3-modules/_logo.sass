@@ -1,8 +1,33 @@
 @import '../config'
 
 .logo
-	height: 4rem
+	display: flex
+	flex-direction: column
+	align-items: center
+	&__svg
+		width: 2.2rem
+		margin-bottom: 5px
+		+medium
+			width: 4rem
+			margin-bottom: 10px
 	&__rec
 		fill: $black-color
 		&--green
 			fill: $primary-color
+
+	&__header
+		font-family: $primary-font
+		font-size: 1.4rem
+		color: $primary-color
+		text-transform: uppercase
+		+medium
+			font-size: 3rem
+	&__subtext
+		@extend .logo__header
+		display: none
+		+medium
+			display: initial
+			font-size: 0.5rem
+		&--color
+			+medium
+				color: $black-color
