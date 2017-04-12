@@ -10,6 +10,7 @@ window.addEventListener('load', function load() {
 	menu_toggle.event_listener();
 	nav.event_listener();
 	svg.handler();
+	leafly.handler();
 
 	//remove listener
 	window.removeEventListener('load', load, false);

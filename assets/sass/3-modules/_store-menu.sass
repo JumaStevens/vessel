@@ -1,0 +1,48 @@
+@import '../config'
+
+.store-menu
+	
+	&__content
+		display: flex
+		flex-direction: column
+		margin: 80px 0 100px 0
+		+medium
+			margin: 0
+		
+	&__header
+		font-family: $primary-font
+		font-size: 1.4rem
+		color: $primary-color
+		text-transform: uppercase
+		text-align: center
+		&-subtext
+			margin-top: 1px
+			margin-bottom: 30px
+			font-family: $primary-font
+			font-size: 0.5rem
+			color: $black-color
+			text-transform: uppercase
+			text-align: center
+			+medium
+				margin-bottom: 40px
+
+	&__leafly
+		width: calc(100vw - 40px)
+		height: 80vh
+		border: 3px solid $primary-color
+		+medium
+			width: 450px
+			height: 50vh
+			padding: 10px
+
+		&-refresh
+			margin-bottom: 3px
+			font-family: $secondary-font
+			font-size: 0.5rem
+			color: $primary-color
+			text-transform: uppercase
+			text-align: right
+			&-svg
+				width: 0.4rem
+				margin-right: 5px
+				fill: $primary-color

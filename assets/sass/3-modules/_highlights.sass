@@ -1,0 +1,40 @@
+@import '../config'
+
+.highlights
+	&__content
+		margin: 40px 20px 60px 20px
+		+medium
+			margin: 0 20px
+	
+	&__header
+		margin-bottom: -10px
+		font-family: $primary-font
+		font-size: 1.4rem
+		color: $primary-color
+		text-transform: uppercase
+		text-align: center
+
+	&__item
+		margin: 40px 0
+		display: flex
+		align-items: flex-start
+		+medium
+			margin: 50px 0
+	&__svg
+		width: 60px
+		margin-right: 10px
+		&-rec
+			fill: $primary-color
+		&-path
+			fill: $white-color
+
+	&__copy
+		max-width: 380px
+		font-family: $secondary-font
+		font-size: 1rem
+		color: $black-color
+		line-height: 1.2
+		transform: translateY(-0.25rem)
+		+medium
+			line-height: 1.4
+			transform: translateY(-0.3rem)
