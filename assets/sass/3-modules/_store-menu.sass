@@ -27,11 +27,12 @@
 				margin-bottom: 40px
 
 	&__leafly
-		width: calc(100vw - 40px)
+		width: 87.952vw
 		height: 80vh
 		border: 3px solid $primary-color
-		+medium
+		@media screen and (min-width: 512px)
 			width: 450px
+		+medium
 			height: 50vh
 			padding: 10px
 
@@ -42,6 +43,7 @@
 			color: $primary-color
 			text-transform: uppercase
 			text-align: right
+			cursor: pointer
 			&-svg
 				width: 0.4rem
 				margin-right: 5px

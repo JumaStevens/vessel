@@ -142,16 +142,71 @@
 							</article>
 						</section>
 
+						
+						<div class="location__header-map-container">
+							<h2 class="location__header location__header-0">Location</h2>
+							<div class="location__map-container">
+								<div class="location__map" id="map"></div>
+							</div>
+						</div>
+
 						<!-- location -->
 						<section class="location section-container">
-							<img class="section-image location__image" src="https://s-media-cache-ak0.pinimg.com/originals/85/b5/34/85b534a3515e4491fa712303d8a91803.jpg">
-							<h1>LOCATION</h1>
+							<h2 class="location__header">Location</h2>
+							<ul class="location__list">
+								<li class="location__item">
+									<svg class="highlights__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500"></svg>
+									<span class="location__copy-container">
+										<h3 class="location__sub-header">Hours</h3>
+										<p class="location__copy">Open daily. 11am - 7pm.</p>
+									</span>
+								</li>
+								<li class="location__item">
+									<svg class="highlights__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500"></svg>
+									<span class="location__copy-container">
+										<h3 class="location__sub-header">Free Parking</h3>
+										<p class="location__copy">On site parking lot.</p>
+									</span>
+								</li>
+								<li class="location__item">
+									<svg class="highlights__svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500"></svg>
+									<span class="location__copy-container">
+										<h3 class="location__sub-header">Address</h3>
+										<p class="location__copy">1979 NW Vaughn Portland, OR 97209</p>
+									</span>
+								</li>
+							</ul>
 						</section>
 
 						<!-- contact -->
 						<section class="contact section-container">
 							<img class="section-image contact__image" src="http://wallpapercave.com/wp/INdBSY5.jpg">
 							<h1>CONTACT</h1>
+							<form class="contact__form">
+								<div class="contact__form-group">      
+									<input class="contact__form-input" type="text" required>
+									<span class="contact__form-highlight"></span>
+									<span class="contact__form-bar"></span>
+									<label class="contact__form-label">Name</label>
+								</div>
+
+								<div class="contact__form-group">      
+									<input class="contact__form-input" type="text" required>
+									<span class="contact__form-highlight"></span>
+									<span class="contact__form-bar"></span>
+									<label class="contact__form-label">Email</label>
+								</div>
+
+								<div class="contact__form-group">      
+									<textarea class="contact__form-input contact__form-textarea" type="text" cols="40" rows="5" required></textarea>
+									<span class="contact__form-highlight"></span>
+									<span class="contact__form-bar"></span>
+									<label class="contact__form-label">Message</label>
+								</div>
+									<input class="contact__form-submit" type="submit" value="Send">
+									<!-- spam bot honeypot -->
+									<input class="contact__form-honeypot" type="text" name="company" placeholder="honeypot for spam bots (leave empty)!">
+							</form>
 						</section>
 
 						<!-- footer -->
@@ -166,8 +221,6 @@
 							<div class="image-container__image image-container__image-1"></div>
 							
 							<div class="image-container__image image-container__image-2"></div>
-							
-							<div class="image-container__image image-container__image-3"></div>
 						</div>
 						<!-- section background -->
 						<div class="section-background">
@@ -185,7 +238,8 @@
 		<!-- NO JAVASCRIPT -->
 		<noscript>
 		</noscript>
-		<!-- SCRIPT -->
+		<!-- SCRIPT(S) -->
 		<script type="text/javascript" src="../js/script.min.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1rxRhw9pDoDORsZcYPDIwnro83KfKFAI&callback=initMap"></script>
 	</body>
 </html>
