@@ -4,15 +4,61 @@
 	width: 100vw
 	background: $primary-color
 	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
+	flex-wrap: wrap
+
 	+medium
 		position: fixed
-		z-index: 20
+		z-index: 50
 		top: 100%
 		right: 0
 		width: calc(50vw - #{$menu-border-width}/2)
 		height: calc(50vh - 100px) // 100px = .nav height/2
 		max-height: 200px
 		transition: transform 500ms ease-in
+
+	&__list-container
+		width: 100%
+		align-self: flex-start
+		display: flex
+		flex-wrap: wrap
+
+	&__list
+		margin: 0 30px
+		font-family: $secondary-font
+		font-size: 0.8rem
+		color: $white-color
+
+	&__item
+		margin: 5px 0
+		&-header
+			margin-top: 20px
+			font-size: 1rem
+			text-decoration: underline
+
+	&__copyright
+		align-self: flex-end
+		margin: 40px auto 10px auto
+		font-family: $secondary-font
+		font-size: 0.8rem
+		color: $white-color
+
+	&__credit-link
+		font-family: $secondary-font
+		font-size: 0.8rem
+		color: $white-color
+		text-decoration: underline
+
+	&-shader
+		+medium
+			position: fixed
+			z-index: 49
+			top: 0
+			right: 0
+			width: calc(50vw - #{$menu-border-width}/2)
+			height: 100vh
+			background: $white-color
+			visibility: hidden
+			opacity: 0
+			display: initial
+			content: ''
+			transition: opacity 500ms ease-in, visibility 0ms ease-in 500ms

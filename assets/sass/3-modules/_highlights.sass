@@ -13,21 +13,17 @@
 		color: $primary-color
 		text-transform: uppercase
 		text-align: center
-
+		+medium
+			font-size: 1.7rem
 	&__item
 		margin: 40px 0
+		border: 2px solid $white-color
+		background: $white-color
+		box-shadow: -3px 5px 10px rgba(34, 34, 34, 0.3)
 		display: flex
 		align-items: flex-start
 		+medium
 			margin: 50px 0
-	&__svg
-		width: 60px
-		min-width: 60px
-		margin-right: 10px
-		&-rec
-			fill: $primary-color
-		&-path
-			fill: $white-color
 
 	&__copy
 		max-width: 380px
@@ -35,7 +31,5 @@
 		font-size: 1rem
 		color: $black-color
 		line-height: 1.2
-		transform: translateY(-0.25rem)
 		+medium
 			line-height: 1.4
-			transform: translateY(-0.3rem)

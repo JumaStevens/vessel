@@ -18,9 +18,13 @@
 // active section (footer)
 .nav-footer .footer
 	+medium
-		z-index: 22
 		transform: translateY(-100%)
-
+	&-shader
+		+medium
+			visibility: initial
+			opacity: 0.8
+			transition: opacity 500ms ease-in
+			
 // active section indicator
 .nav-about .nav__indicator-0,
 .nav-highlights .nav__indicator-1,
@@ -40,6 +44,7 @@
 .nav-footer .image-container__image-2
 	+medium
 		z-index: 12
+		opacity: 1
 
 // buttons
 .nav-about .nav__button-up,
