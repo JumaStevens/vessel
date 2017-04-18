@@ -1,0 +1,21 @@
+@import '../config'
+
+.pop-up-faq .pop-up,
+.pop-up-vendors .pop-up,
+.pop-up-careers .pop-up
+	z-index: 1000
+	visibility: initial
+	transform: translateX(100%)
+	transition: transform 500ms ease-out, visibility 0ms
+
+.pop-up-faq .pop-up__exit,
+.pop-up-vendors .pop-up__exit,
+.pop-up-careers .pop-up__exit
+	visibility: initial
+	transform: translateY(80px)
+	transition: transform 500ms ease 500ms
+
+.pop-up-faq .pop-up__faq,
+.pop-up-vendors .pop-up__vendors,
+.pop-up-careers .pop-up__careers
+	display: initial

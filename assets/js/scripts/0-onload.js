@@ -11,6 +11,7 @@ window.addEventListener('load', function load() {
 	nav.event_listener();
 	svg.handler();
 	leafly.handler();
+	pop_up.event_listener();
 
 	//remove listener
 	window.removeEventListener('load', load, false);

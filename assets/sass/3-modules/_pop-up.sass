@@ -1,0 +1,81 @@
+@import '../config'
+
+.pop-up
+	position: fixed
+	top: 0
+	left: -100%
+	z-index: -999
+	width: 100vw
+	height: 100vh
+	visibility: hidden
+	background: $white-color
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: transform 500ms ease-out, visibility 0ms 500ms, z-index 0ms 500ms
+
+	&__article
+		max-width: 450px
+		margin: 20px
+		overflow: scroll
+		display: none
+
+		&-header
+			font-family: $primary-font
+			font-size: 1.4rem
+			color: $primary-color
+			text-transform: uppercase
+			text-align: center
+			margin-bottom: 20px
+			+medium
+				font-size: 1.7rem
+
+		&-copy
+			font-family: $secondary-font
+			font-size: 1rem
+			color: $black-color
+
+		&-list
+			list-style: initial
+
+		&-item
+			margin-bottom: 40px
+
+		&-subheader
+			@extend .pop-up__article-header
+			margin-bottom: 5px
+			font-size: 1rem
+			text-align: initial
+			
+	&__exit
+		position: fixed
+		z-index: 1001
+		top: -40px
+		right: 40px
+		width: 40px
+		height: 40px
+		visibility: hidden
+		border-radius: 25px
+		background: $white-color
+		display: flex
+		justify-content: center
+		align-items: center
+
+		&-container
+			position: relative
+			width: 20px
+			height: 20px
+	
+		&-line-0
+			position: absolute
+			top: 5px
+			right: 0
+			width: 100%
+			height: 2px
+			background: $primary-color
+			transform: translate(0, 4px) rotate(-45deg)
+
+		&-line-1
+			@extend .pop-up__exit-line-0
+			bottom: 5px
+			transform: translate(0, 4px) rotate(45deg)

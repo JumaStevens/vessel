@@ -7,12 +7,12 @@ var leafly = {
 
 		leafly.iframe.addEventListener('load', function load() {
 			leafly.iframe.removeEventListener('load', load, false);
-			leafly.event_handler();
+			leafly.event_listener();
 		}, false);
 
 	},
 
-	event_handler: function() {
+	event_listener: function() {
 		const refresh_button = document.getElementsByClassName('store-menu__leafly-refresh')[0];
 		
 		refresh_button.addEventListener('click', function refresh() {
