@@ -12,12 +12,12 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	transition: transform 500ms ease-out, visibility 0ms 500ms, z-index 0ms 500ms
+	transition: transform 250ms ease-out, visibility 0ms 250ms, z-index 0ms 250ms
 
 	&__article
 		max-width: 450px
 		margin: 20px
-		overflow: scroll
+		overflow: auto
 		display: none
 
 		&-header
@@ -57,6 +57,7 @@
 		visibility: hidden
 		border-radius: 25px
 		background: $white-color
+		cursor: pointer
 		display: flex
 		justify-content: center
 		align-items: center

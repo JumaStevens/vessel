@@ -1,20 +1,24 @@
 @import '../config'
 
 .menu-close .menu
-	transform: translateX(0px)
-	transition: transform 500ms ease
+	transform: translateX(0)
+	transition: transform 300ms ease-out 200ms
 	+medium
 		transform: translateX($menu-border-width)
 
-	&-nav__link, &-social__link, &-credit__copy
-		visibility: none
-		transition: transform 0ms ease
+	&-nav__link,
+	&-social__link,
+	&-credit__copy
+		visibility: hidden
+		transition: transform 200ms ease-in, visibility 0ms 200ms
 
 .menu-close .menu-toggle--left
-	transition: transform 500ms ease
+	transition: transform 300ms ease-out 200ms
+	+medium
+		transition: transform 100ms ease-out 400ms
 
 .menu-close .menu-color
 	+medium
 		visibility: hidden
 		transform: translateX(0)
-		transition: transform 100ms ease, visibility 0ms 500ms
+		transition: transform 200ms ease-in, visibility 0ms 200ms

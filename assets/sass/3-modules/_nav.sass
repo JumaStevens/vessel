@@ -18,7 +18,7 @@
 		justify-content: space-between
 		align-items: center
 		transform: translate(-50%, -50%)
-		transition: opacity 250ms ease-in 500ms
+		transition: opacity 250ms ease-out
 
 	&__button
 		+medium
@@ -31,7 +31,7 @@
 			justify-content: center
 			align-items: center
 			cursor: pointer
-			transition: opacity 250ms ease, box-shadow 100ms ease-out, transform 100ms ease-out
+			transition: opacity 200ms ease-in, box-shadow 200ms ease-out, transform 200ms ease-out
 		&:active
 			+medium
 				box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.5)
@@ -67,4 +67,4 @@
 			height: 10px
 			border-radius: 25px
 			background: $grey-color
-			transition: background 500ms ease
+			transition: background 250ms ease-out

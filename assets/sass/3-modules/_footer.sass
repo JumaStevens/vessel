@@ -14,7 +14,7 @@
 		width: calc(50vw - #{$menu-border-width}/2)
 		height: calc(50vh - 100px) // 100px = .nav height/2
 		max-height: 200px
-		transition: transform 500ms ease-in
+		transition: transform 250ms ease-in
 
 	&__list-container
 		width: 100%
@@ -34,6 +34,10 @@
 			margin-top: 20px
 			font-size: 1rem
 			text-decoration: underline
+
+	&__pop-up,
+	&__nav
+		cursor: pointer
 
 	&__copyright
 		align-self: flex-end
@@ -60,5 +64,4 @@
 			visibility: hidden
 			opacity: 0
 			display: initial
-			content: ''
-			transition: opacity 500ms ease-in, visibility 0ms ease-in 500ms
+			transition: opacity 500ms ease-in, visibility 0ms 500ms

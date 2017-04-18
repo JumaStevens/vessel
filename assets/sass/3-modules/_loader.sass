@@ -1,0 +1,35 @@
+@import '../config'
+
+.loader
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 9999
+	width: 100vw
+	height: 100vh
+	background: $white-color
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: transform 250ms ease-in, visibility 0ms 250ms, z-index 0ms 250ms
+
+	&__logo-svg
+		width: 6rem
+		margin: 0
+		+medium
+			width: 8rem
+
+		& .logo__rec--green
+			animation: logo_spin 500ms infinite
+			&-1
+				animation-delay: 375ms
+			&-2
+				animation-delay: 125ms
+			&-3
+				animation-delay: 250ms
+
+@keyframes logo_spin
+	0%, 24%
+		opacity: 0.8
+	25%
+		opacity: 1

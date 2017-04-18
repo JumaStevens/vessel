@@ -17,7 +17,9 @@
 		display: flex
 		justify-content: center
 		align-items: center
-		transition: transform 500ms ease 500ms
+		transition: transform 250ms ease-in 250ms
+		+medium
+			transition: transform 250ms ease-in
 
 	&--left
 		top: 50vh
@@ -25,7 +27,7 @@
 		background: transparent
 		cursor: pointer
 		transform: translate(-$menu-border-width/2 - 20px, -50%)
-		transition: transform 100ms ease 400ms
+		transition: transform 250ms ease-out
 	
 	&-container
 		position: relative
@@ -39,7 +41,7 @@
 		width: 100%
 		height: 2px
 		background: $primary-color
-		transition: transform 500ms, width 500ms
+		transition: transform 250ms ease, width 250ms ease
 	
 	&__line-1
 		@extend .menu-toggle__line-0
