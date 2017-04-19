@@ -10,7 +10,6 @@ window.addEventListener('load', function load() {
 	// calls
 	menu_toggle.event_listener();
 	nav.event_listener();
-	svg.handler();
 	leafly.handler();
 	contact_form.event_listener();
 	pop_up.event_listener();

@@ -86,8 +86,10 @@ var contact_form = {
 				container.classList.remove('form-response');
 				// add listener
 				contact_form.event_listener();
-				// return type value
-				button.type = 'submit';
+				// return form values
+				contact_form.form.method = 'POST';
+				contact_form.form.action = 'contact_form';
+				contact_form.button.type = 'submit';
 			}, 6000);
 		}
 		else if(type === 'error') {
@@ -108,8 +110,10 @@ var contact_form = {
 				container.classList.remove('form-response');
 				// add listener
 				contact_form.event_listener();
-				// return type value
-				button.type = 'submit';
+				// return form values
+				contact_form.form.method = 'POST';
+				contact_form.form.action = 'contact_form';
+				contact_form.button.type = 'submit';
 			}, 6000);
 		}
 	},
@@ -117,17 +121,16 @@ var contact_form = {
 
 	event_listener: function() {
 		contact_form.form.addEventListener('submit', function form_submit(e) {
+			// remove listener
+			contact_form.form.removeEventListener('submit', form_submit, false);
 			// prevent URL change/refresh
 			e.preventDefault();
-			// prevent response page change
+			// clear form values
 			contact_form.form.method = '';
 			contact_form.form.action = '';
-			// prevent user from submitting form with 'enter' if sending
 			contact_form.button.type = '';
 			// call
 			contact_form.submit();
-			// remove listener
-			contact_form.form.removeEventListener('submit', form_submit, false);
 		}, false);
 	}
 };

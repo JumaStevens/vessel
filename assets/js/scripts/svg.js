@@ -33,3 +33,6 @@ var svg = {
 		
 	}
 };
+
+// call
+svg.handler();
