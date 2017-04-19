@@ -3,7 +3,7 @@ var contact_form = {
 	button: document.getElementsByClassName('contact__form-submit')[0],
 
 	// form submission
-	submit: function(e) {
+	submit: function() {
 		const form = contact_form.form;
     	// collect form data
     	let data = {
@@ -18,15 +18,15 @@ var contact_form = {
     		// spam
     		contact_form.response('error', 'spam');
     	} else {
-    		// real person
-    		ajax();
+    		// real message
+    		ajax(e);
     		contact_form.response('sending');
     	}
 
     	// ajax
-    	function ajax(e) {
+    	function ajax() {
 	    	var xhr = new XMLHttpRequest();
-	    	xhr.open(form.method, form.action);
+	    	xhr.open('POST', 'contact_form');
 	    	xhr.setRequestHeader('Content-Type', 'application/json');
 	    	xhr.timeout = 15000;
 	    	xhr.send(JSON.stringify(data));
@@ -54,11 +54,8 @@ var contact_form = {
 	       		xhr.abort();
 	       		contact_form.response('error', 'timeout');
 	       	};
-	       	// prevent URL change/refresh
-			e.preventDefault();
+
 	    };
-	    // prevent URL change/refresh
-		e.preventDefault();
 	},
 
 
@@ -120,12 +117,14 @@ var contact_form = {
 
 	event_listener: function() {
 		contact_form.form.addEventListener('submit', function form_submit(e) {
-			contact_form.submit(e);
+			contact_form.submit();
 			// prevent URL change/refresh
 			e.preventDefault();
-			e.stopImmediatePropagation();
+			// prevent response page change
+			contact_form.form.method = '';
+			contact_form.form.action = '';
 			// prevent user from submitting form with 'enter' if sending
-			//contact_form.button.type = '';
+			contact_form.button.type = '';
 			// remove listener
 			contact_form.form.removeEventListener('submit', form_submit, false);
 		}, false);
