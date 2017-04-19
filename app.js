@@ -2,8 +2,6 @@ const express = require('express');
 const app = express();
 
 
-
-
 // home route
 app.use(require('./routes/index.js'));
 // contact form route
