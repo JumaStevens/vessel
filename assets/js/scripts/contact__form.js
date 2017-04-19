@@ -116,13 +116,13 @@ var contact_form = {
 
 
 	event_listener: function() {
-		contact_form.form.addEventListener('submit', contact_form.submit, false);
-		/*contact_form.form.addEventListener('submit', function form_submit(e) {
+		contact_form.form.addEventListener('submit', function form_submit(e) {
+			console.log(e);
 			contact_form.submit(e);
 			// prevent user from submitting form with 'enter' if sending
 			contact_form.button.type = '';
 			// remove listener
 			contact_form.removeEventListener('submit', form_submit, false);
-		}, false);*/
+		}, false);
 	}
 };
