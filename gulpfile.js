@@ -1,14 +1,15 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	sass = require('gulp-sass'),
 	cleanCSS = require('gulp-clean-css'),
 	connect = require('gulp-connect'),
 	uglify = require('gulp-uglify'),
 	concat = require('gulp-concat'),
-	rename = require('gulp-rename');
-	babel = require('gulp-babel');
+	rename = require('gulp-rename'),
+	babel = require('gulp-babel'),
+	autoprefixer = require('gulp-autoprefixer');
 
-var jsSources = ['assets/js/scripts/*.js'],
+const jsSources = ['assets/js/scripts/*.js'],
 	sassSources = ['assets/sass/app.sass'],
 	cssSources = ['assets/css/stylesheets/*.css'],
 	htmlSources = ['assets/views/*.html'];
@@ -26,6 +27,7 @@ gulp.task('sass', function() {
 	gulp.src(sassSources)
 	.pipe(sass({outputStyle: 'extended'}))
 	.on('error', gutil.log)
+	.pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
 	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(rename('app.min.css'))
 	.pipe(gulp.dest('assets/css'))
