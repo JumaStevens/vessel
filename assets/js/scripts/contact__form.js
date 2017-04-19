@@ -117,7 +117,6 @@ var contact_form = {
 
 	event_listener: function() {
 		contact_form.form.addEventListener('submit', function form_submit(e) {
-			contact_form.submit();
 			// prevent URL change/refresh
 			e.preventDefault();
 			// prevent response page change
@@ -125,6 +124,8 @@ var contact_form = {
 			contact_form.form.action = '';
 			// prevent user from submitting form with 'enter' if sending
 			contact_form.button.type = '';
+			// call
+			contact_form.submit();
 			// remove listener
 			contact_form.form.removeEventListener('submit', form_submit, false);
 		}, false);
