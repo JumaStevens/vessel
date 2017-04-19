@@ -14,16 +14,17 @@
 	flex-direction: column
 	justify-content: center
 	transition: transform 250ms ease-out
-	+medium
+	+mq-tablet
 		font-size: 3rem
+	+mq-split
 		transform: translateX($menu-border-width)
 	&-toggle--top
 		transform: translate(0, 0)
-		+medium
+		+mq-split
 			transform: translate(0, -80px)
 	&-toggle--left
 		transform: translate(-$menu-border-width/2 - 20px, -50%)
-		+medium
+		+mq-split
 			transform: translate(-50%, -50%)
 
 .menu-nav
@@ -31,7 +32,7 @@
 	&__item
 		margin: 5px 0
 		overflow: hidden
-		+medium
+		+mq-split
 			margin: 10px 0
 	&__link
 		position: relative
@@ -46,7 +47,7 @@
 .menu-social
 	margin: 25px 0 0 16vw
 	display: flex
-	+medium
+	+mq-split
 		margin: 40px 0 0 16vw
 	&__item
 		margin-right: 10px
@@ -61,7 +62,7 @@
 	bottom: 0
 	margin: 0 0 10px 16vw
 	overflow: hidden
-	+medium
+	+mq-split
 		margin: 0 0 20px 16vw
 	&__copy
 		display: block

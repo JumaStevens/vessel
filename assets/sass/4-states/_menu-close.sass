@@ -3,7 +3,7 @@
 .menu-close .menu
 	transform: translateX(0)
 	transition: transform 300ms ease-out 200ms
-	+medium
+	+mq-split
 		transform: translateX($menu-border-width)
 
 	&-nav__link,
@@ -14,11 +14,11 @@
 
 .menu-close .menu-toggle--left
 	transition: transform 300ms ease-out 200ms
-	+medium
+	+mq-split
 		transition: transform 100ms ease-out 400ms
 
 .menu-close .menu-color
-	+medium
+	+mq-split
 		visibility: hidden
 		transform: translateX(0)
 		transition: transform 200ms ease-in, visibility 0ms 200ms

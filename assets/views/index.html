@@ -192,24 +192,24 @@
 						<section class="contact section-container" id="contact">
 							<img class="section-image contact__image" src="../images/image_2.jpg">
 							<h2 class="contact__header">Contact</h2>
-							<form class="contact__form">
+							<form class="contact__form" action="contact_form" method="post">
 								<h3 class="contact__form-header">Message Us!</h3>
 								<div class="contact__form-group">      
-									<input class="contact__form-input" type="text" required>
+									<input class="contact__form-input" type="text" name="name" autocomplete="name" required>
 									<span class="contact__form-highlight"></span>
 									<span class="contact__form-bar"></span>
 									<label class="contact__form-label">Name</label>
 								</div>
 
 								<div class="contact__form-group">      
-									<input class="contact__form-input" type="text" required>
+									<input class="contact__form-input" type="email" name="email" autocomplete="email" required>
 									<span class="contact__form-highlight"></span>
 									<span class="contact__form-bar"></span>
 									<label class="contact__form-label">Email</label>
 								</div>
 
 								<div class="contact__form-group">      
-									<textarea class="contact__form-input contact__form-textarea" type="text" cols="40" rows="5" required></textarea>
+									<textarea class="contact__form-input contact__form-textarea" type="text" name="message" cols="40" rows="5" required></textarea>
 									<span class="contact__form-highlight"></span>
 									<span class="contact__form-bar"></span>
 									<label class="contact__form-label">Message</label>
@@ -218,6 +218,11 @@
 								<input class="contact__form-submit" type="submit" value="Send">
 								<!-- spam bot honeypot -->
 								<input class="contact__form-honeypot" type="text" name="company" placeholder="honeypot for spam bots (leave empty)!">
+								<!-- response message -->
+								<div class="contact__form-response">
+									<h5 class="contact__form-response-header"></h5>
+									<p class="contact__form-response-copy"></p>
+								</div>
 							</form>
 							<div class="contact__phone">
 								<svg class="highlights__svg list-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 500 500"></svg>

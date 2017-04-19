@@ -5,7 +5,7 @@
 	z-index: -1
 	visibility: hidden
 	opacity: 0
-	+medium
+	+mq-split
 		z-index: 90
 		top: 50%
 		left: calc(50% + #{$menu-border-width}/2)
@@ -21,7 +21,7 @@
 		transition: opacity 250ms ease-out
 
 	&__button
-		+medium
+		+mq-split
 			width: 35px
 			height: 35px
 			border-radius: 25px
@@ -33,11 +33,11 @@
 			cursor: pointer
 			transition: opacity 200ms ease-in, box-shadow 200ms ease-out, transform 200ms ease-out
 		&:active
-			+medium
+			+mq-split
 				box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.5)
 				transform: scale(0.95)
 		&-arrow
-			+medium
+			+mq-split
 				width: 16px
 				height: 16px
 				fill: $white-color
@@ -45,11 +45,11 @@
 				transform: translateY(1px)
 				transition: opacity 1000ms ease
 			&-up
-				+medium
+				+mq-split
 					transform: translateY(-1px)
 
 	&__indicator-container
-		+medium
+		+mq-split
 			width: 20px
 			height: 50%
 			padding: 5px 0
@@ -62,7 +62,7 @@
 			align-items: center
 
 	&__indicator
-		+medium
+		+mq-split
 			width: 10px
 			height: 10px
 			border-radius: 25px

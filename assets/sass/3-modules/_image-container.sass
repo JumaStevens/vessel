@@ -2,7 +2,7 @@
 
 .image-container
 	display: none;
-	+medium
+	+mq-split
 		position: fixed
 		z-index: 10
 		top: 0
@@ -13,12 +13,12 @@
 
 	&__image
 		@extend .image-container
-		+medium
+		+mq-split
 			background-repeat: no-repeat
 			background-size: cover
 			opacity: 0
 			transition: opacity 250ms ease-out 125ms
 
 	&__image-0
-		+medium
+		+mq-split
 			z-index: 11

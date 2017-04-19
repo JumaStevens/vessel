@@ -2,17 +2,23 @@
 $primary-color: rgb(136, 176, 75)
 $white-color: rgb(255, 255, 255)
 $black-color: rgb(34, 34, 34)
-$grey-color: rgb(189, 195, 199) //temp
+$grey-color: rgb(189, 195, 199)
 
 // font
 $primary-font: 'Montserrat', sans-serif
 $secondary-font: 'Crimson Text', serif
 
-// transition durations
-$trans-dur: 500ms
-
-// media queries
-$medium-width: 1200px
-
 // menu border width
 $menu-border-width: 50px
+
+// media queries
+$tablet-width: 700px
+$split-width: 1200px
+
+=mq-tablet
+	@media screen and (min-width: $tablet-width)
+		@content
+
+=mq-split
+	@media screen and (min-width: $split-width)
+		@content
