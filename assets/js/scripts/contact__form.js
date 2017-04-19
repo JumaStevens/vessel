@@ -55,9 +55,10 @@ var contact_form = {
 	       	};
 	    };
 
-	    
+
        	// stop url change
 		contact_form.form.preventDefault();
+		e.preventDefault();
 	},
 
 
