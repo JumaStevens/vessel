@@ -19,7 +19,7 @@ var contact_form = {
     		contact_form.response('error', 'spam');
     	} else {
     		// real message
-    		ajax(e);
+    		ajax();
     		contact_form.response('sending');
     	}
 
