@@ -26,7 +26,7 @@ var contact_form = {
     	// ajax
     	function ajax() {
 	    	var xhr = new XMLHttpRequest();
-	    	xhr.open(form.method, form.action);
+	    	xhr.open(form.method, 'https://vesselpdx.herokuapp.com/contact_form');
 	    	xhr.setRequestHeader('Content-Type', 'application/json');
 	    	xhr.timeout = 15000;
 	    	xhr.send(JSON.stringify(data));
@@ -54,11 +54,6 @@ var contact_form = {
 	       		contact_form.response('error', 'timeout');
 	       	};
 	    };
-
-
-       	// stop url change
-		contact_form.form.preventDefault();
-		e.preventDefault();
 	},
 
 
