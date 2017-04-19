@@ -1,6 +1,6 @@
 var leafly = {
 	iframe: document.getElementsByClassName('store-menu__leafly')[0],
-	src: 'http://www-vesselpdx-com.usrfiles.com/html/fef372_e4240a5365c2d25ff94de84560f07782.html',
+	src: 'https://www-vesselpdx-com.usrfiles.com/html/fef372_e4240a5365c2d25ff94de84560f07782.html',
 
 	handler: function() {
 		leafly.iframe.src = leafly.src;
