@@ -12,6 +12,7 @@ window.addEventListener('load', function load() {
 	nav.event_listener();
 	svg.handler();
 	leafly.handler();
+	contact_form.event_listener();
 	pop_up.event_listener();
 
 	// loader complete

@@ -4,6 +4,7 @@ var contact_form = {
 
 	// form submission
 	submit: function(e) {
+		 console.log(e);
 		const form = contact_form.form;
     	// collect form data
     	let data = {
@@ -26,7 +27,7 @@ var contact_form = {
     	// ajax
     	function ajax() {
 	    	var xhr = new XMLHttpRequest();
-	    	xhr.open('POST', 'https://vesselpdx.herokuapp.com/contact_form');
+	    	xhr.open(form.method, form.action);
 	    	xhr.setRequestHeader('Content-Type', 'application/json');
 	    	xhr.timeout = 15000;
 	    	xhr.send(JSON.stringify(data));
@@ -54,6 +55,8 @@ var contact_form = {
 	       		contact_form.response('error', 'timeout');
 	       	};
 	    };
+	    console.log(e);
+	    e.preventDefault();
 	},
 
 
@@ -114,12 +117,13 @@ var contact_form = {
 
 
 	event_listener: function() {
-		contact_form.form.addEventListener('submit', function form_submit() {
-			contact_form.submit();
+		contact_form.form.addEventListener('submit', contact_form.submit, false);
+		/*contact_form.form.addEventListener('submit', function form_submit(e) {
+			contact_form.submit(e);
 			// prevent user from submitting form with 'enter' if sending
 			contact_form.button.type = '';
 			// remove listener
 			contact_form.removeEventListener('submit', form_submit, false);
-		}, false);
+		}, false);*/
 	}
 };
