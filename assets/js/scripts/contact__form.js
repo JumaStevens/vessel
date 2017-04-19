@@ -34,12 +34,12 @@ var contact_form = {
 	  		// ajax status
 	    	xhr.onload = function() {
 				// success
-				if(JSON.parse(xhr.response).msg === 'success') {
+				if(JSON.parse(xhr.responseText).msg === 'success') {
 					contact_form.response('success');
 				}
 				// error
 				else {
-					contact_form.response('error', JSON.parse(xhr.response).msg);
+					contact_form.response('error', JSON.parse(xhr.responseText).msg);
 				}
 			};
 
@@ -123,8 +123,9 @@ var contact_form = {
 			contact_form.submit(e);
 			// prevent URL change/refresh
 			e.preventDefault();
+			e.stopImmediatePropagation();
 			// prevent user from submitting form with 'enter' if sending
-			contact_form.button.type = '';
+			//contact_form.button.type = '';
 			// remove listener
 			contact_form.form.removeEventListener('submit', form_submit, false);
 		}, false);
