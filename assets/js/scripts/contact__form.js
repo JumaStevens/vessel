@@ -3,7 +3,7 @@ var contact_form = {
 	button: document.getElementsByClassName('contact__form-submit')[0],
 
 	// form submission
-	submit: function() {
+	submit: function(e) {
 		const form = contact_form.form;
     	// collect form data
     	let data = {
@@ -22,7 +22,7 @@ var contact_form = {
     		ajax();
     		contact_form.response('sending');
     	}
-
+    	console.log(e);
     	// ajax
     	function ajax() {
 	    	var xhr = new XMLHttpRequest();
@@ -55,6 +55,7 @@ var contact_form = {
 	       	};
 	    };
 
+	    
        	// stop url change
 		contact_form.form.preventDefault();
 	},
