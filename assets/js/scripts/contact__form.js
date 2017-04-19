@@ -4,7 +4,6 @@ var contact_form = {
 
 	// form submission
 	submit: function(e) {
-		 console.log(e);
 		const form = contact_form.form;
     	// collect form data
     	let data = {
@@ -27,7 +26,7 @@ var contact_form = {
     	// ajax
     	function ajax() {
 	    	var xhr = new XMLHttpRequest();
-	    	xhr.open(form.method, form.action);
+	    	xhr.open('POST', 'https://vesselpdx.herokuapp.com/contact_form');
 	    	xhr.setRequestHeader('Content-Type', 'application/json');
 	    	xhr.timeout = 15000;
 	    	xhr.send(JSON.stringify(data));
