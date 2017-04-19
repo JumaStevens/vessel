@@ -1,0 +1,28 @@
+@import '../config'
+
+.noscript
+	position: fixed
+	z-index: 10000
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	background: $white-color
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	&__header
+		margin: 20px
+		font-family: $primary-font
+		font-size: 1.4rem
+		color: $primary-color
+		text-transform: uppercase
+
+	&__copy
+		max-width: 450px
+		margin: 20px
+		font-family: $secondary-font
+		font-size: 1rem
+		color: $black-color

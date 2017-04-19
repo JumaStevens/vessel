@@ -94,7 +94,7 @@ var contact_form = {
 		}
 		else if(type === 'error') {
 			container.classList.add('form-response');
-			res_header.innerHTML = 'Message Failure';
+			res_header.innerHTML = 'Message Failure.';
 			
 			if(msg === 'spam') {
 				res_copy.innerHTML = 'Your message has been identified as spam.';

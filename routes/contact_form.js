@@ -31,7 +31,7 @@ router.post('/contact_form', function(req, res) {
 
 			// setup email data with unicode symbols
 			let mailOptions = {
-			    from: '"'+ req.body.name +' 💰" <jumastevens.contact@gmail.com>', // sender address
+			    from: '"'+ req.body.name +' 🌱" <jumastevens.contact@gmail.com>', // sender address
 			    to: 'jumastevens@gmail.com', // list of receivers
 			    subject: 'Contact Form Message', // Subject line
 			    html: '<ul><li>From: '+req.body.name+'</li><li>Email: '+req.body.email+'</li><li>'+req.body.message+'</li></ul>' // html body
