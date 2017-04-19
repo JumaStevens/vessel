@@ -3,7 +3,7 @@ var contact_form = {
 	button: document.getElementsByClassName('contact__form-submit')[0],
 
 	// form submission
-	submit: function() {
+	submit: function(e) {
 		const form = contact_form.form;
     	// collect form data
     	let data = {
@@ -24,7 +24,7 @@ var contact_form = {
     	}
 
     	// ajax
-    	function ajax() {
+    	function ajax(e) {
 	    	var xhr = new XMLHttpRequest();
 	    	xhr.open(form.method, form.action);
 	    	xhr.setRequestHeader('Content-Type', 'application/json');
@@ -54,7 +54,11 @@ var contact_form = {
 	       		xhr.abort();
 	       		contact_form.response('error', 'timeout');
 	       	};
+	       	// prevent URL change/refresh
+			e.preventDefault();
 	    };
+	    // prevent URL change/refresh
+		e.preventDefault();
 	},
 
 
@@ -63,8 +67,8 @@ var contact_form = {
 		const container = document.getElementsByClassName('container')[0];
 		const form = contact_form.form;
 		const button = contact_form.button;
-		const res_header = document.getElementsByClassName('contact__form-container')[0];
-		const res_copy = document.getElementsByClassName('contact__response-text')[0];
+		const res_header = document.getElementsByClassName('contact__form-response-header')[0];
+		const res_copy = document.getElementsByClassName('contact__form-response-copy')[0];
 		
 		// handle responses
 		if(type === 'sending') {
@@ -116,7 +120,7 @@ var contact_form = {
 
 	event_listener: function() {
 		contact_form.form.addEventListener('submit', function form_submit(e) {
-			contact_form.submit();
+			contact_form.submit(e);
 			// prevent URL change/refresh
 			e.preventDefault();
 			// prevent user from submitting form with 'enter' if sending
