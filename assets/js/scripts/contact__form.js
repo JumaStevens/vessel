@@ -3,7 +3,7 @@ var contact_form = {
 	button: document.getElementsByClassName('contact__form-submit')[0],
 
 	// form submission
-	submit: function(e) {
+	submit: function() {
 		const form = contact_form.form;
     	// collect form data
     	let data = {
@@ -22,11 +22,11 @@ var contact_form = {
     		ajax();
     		contact_form.response('sending');
     	}
-    	console.log(e);
+
     	// ajax
     	function ajax() {
 	    	var xhr = new XMLHttpRequest();
-	    	xhr.open('POST', 'contact_form');
+	    	xhr.open(form.method, form.action);
 	    	xhr.setRequestHeader('Content-Type', 'application/json');
 	    	xhr.timeout = 15000;
 	    	xhr.send(JSON.stringify(data));
@@ -50,12 +50,11 @@ var contact_form = {
 			};
 
 	       	xhr.ontimeout = function() {
+	       		// error
 	       		xhr.abort();
 	       		contact_form.response('error', 'timeout');
 	       	};
 	    };
-	    console.log(e);
-	    e.preventDefault();
 	},
 
 
@@ -117,12 +116,13 @@ var contact_form = {
 
 	event_listener: function() {
 		contact_form.form.addEventListener('submit', function form_submit(e) {
-			console.log(e);
-			contact_form.submit(e);
+			contact_form.submit();
+			// prevent URL change/refresh
+			e.preventDefault();
 			// prevent user from submitting form with 'enter' if sending
 			contact_form.button.type = '';
 			// remove listener
-			contact_form.removeEventListener('submit', form_submit, false);
+			contact_form.form.removeEventListener('submit', form_submit, false);
 		}, false);
 	}
 };
